@@ -1,7 +1,7 @@
 import React from "react";
 
-function Jumbotron() {
+function Search() {
     return (<p>I'm a Jumbotron!</p>)
 }
 
-export default Jumbotron;
+export default Search;
