@@ -4,6 +4,7 @@ import Saved from "./pages/saved";
 import Search from "./pages/search";
 import Header from "./components/Header";
 import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
 
 
 
@@ -21,6 +22,7 @@ function App() {
                         <Saved />
                     </Route>
                 </Switch>
+                <Footer />
             </div>
         </Router>
     )

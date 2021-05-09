@@ -1,9 +1,14 @@
 import React from "react";
+import Jumbotron from "../components/Jumbotron";
+import Saved from "../components/Saved";
 
-function Saved() {
+function Search() {
     return (
-        <h1> Saved Page </h1>
+        <div>
+            <Jumbotron />
+            <Saved />
+        </div>
     )
 }
 
-export default Saved;
+export default Search;
