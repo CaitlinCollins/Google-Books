@@ -9,16 +9,17 @@ function Search() {
     const [books, setBooks] = useState([]);
     const [query, setQuery] = useState("");
 
-    searchBooks = query => {
+    function searchBooks(query) {
     API.search(query)
     .then(res => {
         const bookData = res.data.items;
         const displayData = bookData.map(book => {
+            console.log(book.volumeInfo.imageLinks)
             return {
                 id: book.id,
                 title: book.volumeInfo.title,
                 author: book.volumeInfo.authors,
-                discription: book.volumeInfo.description,
+                description: book.volumeInfo.description,
                 image: book.volumeInfo.imageLinks.thumbnail,
                 link: book.volumeInfo.infoLink
             }
@@ -28,18 +29,24 @@ function Search() {
     .catch(err => console.log(err))
     }
 
-    handleClick = event => {
+    function handleInputChange(event) {
+        const value = event.target.value;
+        setQuery(value);
+    }
+
+    function handleClick(event) {
         event.preventDefault();
         if (query) {
-            searchBooks();
+            searchBooks(query);
         }
     }
 
     return (
         <div>
             <Jumbotron />
-            <Searches />
+            <Searches query={query} handleInputChange={handleInputChange} handleClick={handleClick}/>
             <Results 
+               books={books}
             />
         </div>
     )

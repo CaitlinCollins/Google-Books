@@ -1,16 +1,16 @@
 import React from "react";
 
-function Search() {
+function Searches(props) {
     return (
         <div>
             <h3>Book Search</h3>
             <p>Book</p>
             <form>
-                <input placeholder="Title Here!"></input>
-                <button>Search</button>
+                <input value={props.query} placeholder="Title Here!" onChange={e => props.handleInputChange(e)}></input>
+                <button onClick={props.handleClick}>Search</button>
             </form>
         </div>
     )
 }
 
-export default Search;
+export default Searches;
