@@ -1,0 +1,14 @@
+header {
+    height: 60px;
+    border-color: black;
+    border-bottom: solid;
+    border-width: 2px;
+    padding-top: 10px;
+}
+
+a {
+    font-size: 20px;
+    text-emphasis: none;
+    margin-left: 5px;
+    
+}

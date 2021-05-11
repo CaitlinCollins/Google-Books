@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import NavBar from "../components/NavBar";
 import Jumbotron from "../components/Jumbotron";
 import Searches from "../components/Searches";
 import Results from "../components/Results";
@@ -43,6 +44,7 @@ function Search() {
 
     return (
         <div>
+            <NavBar />
             <Jumbotron />
             <Searches query={query} handleInputChange={handleInputChange} handleClick={handleClick}/>
             <Results 

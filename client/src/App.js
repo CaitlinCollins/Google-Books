@@ -3,9 +3,6 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Saved from "./pages/saved";
 import Search from "./pages/search";
 import NoMatch from "./pages/noMatch";
-import Header from "./components/Header";
-import NavBar from "./components/NavBar";
-import Footer from "./components/Footer";
 import "./style.css";
 
 

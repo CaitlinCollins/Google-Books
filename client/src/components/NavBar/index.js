@@ -1,13 +1,23 @@
 import React from "react";
-import { Container, Row, Col } from "../Grid";
+import { Link } from "react-router-dom";
+import "./style.css";
 
 function NavBar() {
     return (
-        <nav className="nav">
-            <a className="nav-link gBooks" href="#">Google Books</a>
-            <a class="nav-link" href="#">Search</a>
-            <a class="nav-link" href="#">Saved</a>
-        </nav>
+        <header>
+            <a className="homeLink">
+                <Link to="/">Google Books
+                </Link>
+            </a>
+            <a class="searchLink">
+                <Link to="/Search">Search
+                </Link>
+                </a>
+            <a class="savedLink">
+                <Link to="/Saved">Saved
+                </Link>
+                </a>
+        </header>
          
     )
 }
