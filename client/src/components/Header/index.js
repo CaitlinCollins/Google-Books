@@ -1,8 +1,13 @@
 import React from "react";
+import "./style.css";
 
 function Header() {
     return (
-        <h1> I am a HEADER! </h1>
+        <header className="text-center"> 
+           <p>A Web Page</p>
+           <i className="bi bi-arrow-left-square"></i>
+
+        </header>
     )
 }
 
